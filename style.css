@@ -24,19 +24,15 @@
 body{
     height: 75%;
     background: var(--body-color);
+    transition: var(--tran-03);
 }
 
-.sidebar .header-text{
-    font-size: 13px;
-    font-weight: 500;
-    text-transform: uppercase;
-}
-
-.sidebar .image{
-    min-width: 50px;
-    display: flex;
-    align-items: center;
-
+body.dark{
+    --body-color: #18191a;
+    --sidebar-color:#242526;
+    --first-color: #3A3b3c;
+    --text-color:#ccc;
+    --second-color: #f6f5ff;
 }
 
 .sidebar{
@@ -47,7 +43,48 @@ body{
     height: 100%;
     padding: 10px 14px;
     background: var(--sidebar-color);
+    transition: var(--tran-04);
 }
+
+.sidebar.close{
+    width: 78px;
+    height: 100%;
+}
+
+.sidebar.close .text {
+    opacity: 0;
+}
+
+.sidebar.close .mode-switch {
+    opacity: 0;
+}
+
+.sidebar .text{
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: var(--tran-04);
+    white-space: nowrap;
+}
+
+.sidebar .header-text{
+    font-size: 13px;
+    text-transform: uppercase;
+    color: var(--text-color);
+}
+
+header .header-text .subname{
+    margin-top: -2px;
+    display: block;
+}
+
+.sidebar .image{
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+
+}
+
 
 .sidebar header{
     position: relative;
@@ -90,6 +127,12 @@ body{
     display: flex;
     align-items: center;
     text-decoration: none;
+}
+
+.sidebar header .image,
+.sidebar .icon{
+    min-width: 60px;
+    border-radius: 6px;
 }
 
 .sidebar li .icon{
@@ -153,11 +196,14 @@ body{
 }
 
 .menu-bar .mode .mode-switch{
+    
+    min-width: 60px;
     height: 100%;
     min-width: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .mode-switch .switch{
@@ -178,4 +224,10 @@ body{
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
+    transition: var(--tran-03);
+}
+
+body.dark .switch::before{
+    left: 23px;
+    
 }
