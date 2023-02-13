@@ -67,13 +67,13 @@ body.dark{
     white-space: nowrap;
 }
 
-.sidebar .header-text{
+.sidebar .first-text{
     font-size: 13px;
     text-transform: uppercase;
     color: var(--text-color);
 }
 
-header .header-text .subname{
+first .first-text .subname{
     margin-top: -2px;
     display: block;
 }
@@ -86,12 +86,12 @@ header .header-text .subname{
 }
 
 
-.sidebar header{
+.sidebar first{
     position: relative;
     align-items: center;
 }
 
-.sidebar header .logo{
+.sidebar first .logo{
     display: flex;
     align-items: center;
 }
@@ -101,7 +101,7 @@ header .header-text .subname{
     border-radius: 6px;
 }
 
-.sidebar header .arrow{
+.sidebar first .arrow{
     position: absolute;
     top: 50%;
     right: -25px;
@@ -129,7 +129,7 @@ header .header-text .subname{
     text-decoration: none;
 }
 
-.sidebar header .image,
+.sidebar first .image,
 .sidebar .icon{
     min-width: 60px;
     border-radius: 6px;
